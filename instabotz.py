@@ -27,7 +27,7 @@ while True:
             pass
         
         bot = Bot()
-        bot.login(username=username, password=password])
+        bot.login(username=username, password=password)
         user_id = bot.get_user_id_from_username(to_name)
         text=str(text_list[random.randint(0,len(text_list))]+'\n if {u} {r} reading this then {plz} read {convo} from the start{emoji_sweet}').format(grettings =random.choice(['hi','hey','yo','hello']),
                                                                 stillornot=random.choice(['still','']),
