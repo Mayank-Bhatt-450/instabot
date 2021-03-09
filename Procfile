@@ -1,1 +1,1 @@
-worker:python instabotz.py
+worker: python instabotz.py
