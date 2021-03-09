@@ -1,5 +1,6 @@
 import shutil,time,datetime
 from instabot import Bot
+import os
 text_list=["{stillornot} waiting for ur replay {emoji_sweet}  ",
 "{grettings}{emoji_hi}  Billie hope you {r} doing well {emoji_sweet}, just a reminder i m {stillornot} waiting for {ur} reply  {emoji_funny} ",
 "{grettings}{emoji_hi}  Billie still waiting for {ur} reply {emoji_sweet}have a nice day ",
@@ -12,6 +13,9 @@ text_list=["{stillornot} waiting for ur replay {emoji_sweet}  ",
 
 import random
 #'''
+username=os.environ['user']
+password=os.environ['pass']
+to_name=os.environ['celeb']
 while True:
     try:
         file=open('days.txt','r')
@@ -23,8 +27,8 @@ while True:
             pass
         
         bot = Bot()
-        bot.login(username="404bhatt", password="ilovemyfather")
-        user_id = bot.get_user_id_from_username("billieeilish")
+        bot.login(username=username, password=password])
+        user_id = bot.get_user_id_from_username(to_name)
         text=str(text_list[random.randint(0,len(text_list))]+'\n if {u} {r} reading this then {plz} read {convo} from the start{emoji_sweet}').format(grettings =random.choice(['hi','hey','yo','hello']),
                                                                 stillornot=random.choice(['still','']),
                                                                 u=random.choice(['u','you']),
