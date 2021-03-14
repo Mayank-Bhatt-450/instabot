@@ -51,8 +51,5 @@ while True:
         try:
             requests.post(host+'error',{'msg':str(e)+'\n time='+str(datetime.datetime.now())})
         except Exception as ee:
-            print(ee)
-        
-
-        
+            print(ee)      
 #'''
