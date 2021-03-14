@@ -1,8 +1,10 @@
 import shutil,time,datetime
 from instabot import Bot
 import requests
-import random,json
-
+import random,json,os
+username=os.environ['user']
+password=os.environ['pass']
+to_name=os.environ['celeb']
 host='http://mayankbhatt.pythonanywhere.com/'
 
 days=0
@@ -21,8 +23,8 @@ while True:
             pass
         #'''
         bot = Bot()
-        bot.login(username="404bhatt", password="ilovemyfather")
-        user_id = bot.get_user_id_from_username("vanaraya_namah")
+        bot.login(username=username, password=password)
+        user_id = bot.get_user_id_from_username(to_name)
         #'''
         #print(type(replace_letters))
         text=str(random.choice(text_list)+
