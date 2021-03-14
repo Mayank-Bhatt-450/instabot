@@ -47,7 +47,6 @@ while True:
                                 })
             time.sleep(3600)
             
-
     except Exception as e:
         print(e)
         try:
