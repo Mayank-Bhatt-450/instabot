@@ -37,12 +37,14 @@ while True:
                                                                
         #'''
         bot.send_message(secrets.choice(replace_letters['day'])+' '+str(days)+'  '+secrets.choice(replace_letters['emoji_for_greeting'])+'\n'+text, user_id)
-        user_info = bot.get_user_info(user_id)
+        #user_info = bot.get_user_info(user_id)
         # print(user_info['biography'])
         #'''
-        
-        x1 = requests.post(host+'insta_day')
-        print('should sleep days='+str(days)+' time= '+str(datetime.datetime.now()))
+        try:
+            x1 = requests.post(host+'insta_day')
+        except:
+            pass
+        #print('should sleep days='+str(days)+' time= '+str(datetime.datetime.now()))
         for i in range(0,24):
             
             #print(24-i,'hours left to next msg , day=',days,' time= ',str(datetime.datetime.now()))
